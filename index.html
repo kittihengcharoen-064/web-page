@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <h3 id="name"></h3>
+    <p>INT 130 | Computing Platform Basic</p>
+</div>
+<div class="banner">
+    <img height="75" src="img/banner.png" alt=""></img>
+</div>
+<script>
+    (() => {
+        let speed = 65, i = 0, el = document.getElementById('name'), text = "Kittihengcharoen Chaemprasert"
+        const effect = () => {
+            if (i < text.length) {
+                el.innerHTML += text.charAt(i)
+                i++
+                setTimeout(effect, speed)
+            }
+        }
+        effect()
+    })()
+</script>
+</body>
+</html>
